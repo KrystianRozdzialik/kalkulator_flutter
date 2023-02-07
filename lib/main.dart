@@ -46,7 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         style: ElevatedButton.styleFrom(
           backgroundColor: btncolor,
-          padding: EdgeInsets.all(20),
+                                                  // shadowColor: Color(0xFFFFF),
           //shape: CircleBorder(),
         ),
       ),
@@ -59,10 +59,10 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
 
     return Scaffold(
-      backgroundColor: Colors.grey,
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
+      backgroundColor: Colors.white,
+      // appBar: AppBar(
+      //   title: Text(widget.title),
+      // ),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 5),
         child: Column(
@@ -70,60 +70,149 @@ class _MyHomePageState extends State<MyHomePage> {
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
-              children: [ Padding(padding: EdgeInsets.all(20),
+              children: [ Padding(padding: EdgeInsets.all(30),
                 child: Text('0',
                   textAlign: TextAlign.left,
-                  style: TextStyle(color: Colors.white,
+                  style: TextStyle(color: Colors.black,
                       fontSize: 100),
+                  ),
+                )
+              ],
+            ),
+            SizedBox(height: 50,),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Padding(padding: EdgeInsets.only(bottom: 100),),
+                SizedBox(
+                  height: 70,
+                  width: 70,
+                  child: calcbutton('AC', Colors.white70, Colors.black),
                 ),
-              )
+                SizedBox(
+                  height: 70,
+                  width: 70,
+                  child: calcbutton('+/-', Colors.white70, Colors.black),
+                ),
+                SizedBox(
+                  height: 70,
+                  width: 70,
+                  child: calcbutton('%', Colors.white70, Colors.black),
+                ),
+                SizedBox(
+                  height: 70,
+                  width: 70,
+                  child: calcbutton('/', Colors.white70, Colors.black),
+                ),
+                SizedBox(height: 0,),
               ],
             ),
-
+            // SizedBox(height: 30,),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Padding(padding: EdgeInsets.only(bottom: 120),),
-                calcbutton('AC', Colors.white70, Colors.black),
-                calcbutton('+/-', Colors.white70, Colors.black),
-                calcbutton('%', Colors.white70, Colors.black),
-                calcbutton('/', Colors.orange, Colors.black),
+                Padding(padding: EdgeInsets.only(bottom: 100),),
+                SizedBox(
+                  height: 70,
+                  width: 70,
+                  child: calcbutton('7', Colors.white70, Colors.black),
+                ),
+                SizedBox(
+                  height: 70,
+                  width: 70,
+                  child: calcbutton('8', Colors.white70, Colors.black),
+                ),
+                SizedBox(
+                  height: 70,
+                  width: 70,
+                  child: calcbutton('9', Colors.white70, Colors.black),
+                ),
+                SizedBox(
+                  height: 70,
+                  width: 70,
+                  child: calcbutton('x', Colors.white70, Colors.black),
+                ),
+                SizedBox(height: 0,),
               ],
             ),
-            SizedBox(height: 10,),
+            // SizedBox(height: 30,),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Padding(padding: EdgeInsets.only(bottom: 120),),
-                calcbutton('7', Colors.grey, Colors.black),
-                calcbutton('8', Colors.grey, Colors.black),
-                calcbutton('9', Colors.grey, Colors.black),
-                calcbutton('x', Colors.orange, Colors.black),
+                Padding(padding: EdgeInsets.only(bottom: 100),),
+                SizedBox(
+                  height: 70,
+                  width: 70,
+                  child: calcbutton('4', Colors.white70, Colors.black),
+                ),
+                SizedBox(
+                  height: 70,
+                  width: 70,
+                  child: calcbutton('5', Colors.white70, Colors.black),
+                ),
+                SizedBox(
+                  height: 70,
+                  width: 70,
+                  child: calcbutton('6', Colors.white70, Colors.black),
+                ),
+                SizedBox(
+                  height: 70,
+                  width: 70,
+                  child: calcbutton('-', Colors.white70, Colors.black),
+                ),
+                SizedBox(height: 0,),
               ],
             ),
-            SizedBox(height: 10,),
+            // SizedBox(height: 30,),
             Row(
-
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Padding(padding: EdgeInsets.only(bottom: 120),),
-                calcbutton('4', Colors.grey, Colors.black),
-                calcbutton('5', Colors.grey, Colors.black),
-                calcbutton('6', Colors.grey, Colors.black),
-                calcbutton('-', Colors.orange, Colors.black),
+                Padding(padding: EdgeInsets.only(bottom: 100),),
+                SizedBox(
+                  height: 70,
+                  width: 70,
+                  child: calcbutton('1', Colors.white70, Colors.black),
+                ),
+                SizedBox(
+                  height: 70,
+                  width: 70,
+                  child: calcbutton('2', Colors.white70, Colors.black),
+                ),
+                SizedBox(
+                  height: 70,
+                  width: 70,
+                  child: calcbutton('3', Colors.white70, Colors.black),
+                ),
+                SizedBox(
+                  height: 70,
+                  width: 70,
+                  child: calcbutton('+', Colors.white70, Colors.black),
+                ),
+                SizedBox(height: 0,),
               ],
             ),
-            SizedBox(height: 10,),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Padding(padding: EdgeInsets.only(bottom: 150),),
-                calcbutton('1', Colors.grey, Colors.black),
-                calcbutton('2', Colors.grey, Colors.black),
-                calcbutton('3', Colors.grey, Colors.black),
-                calcbutton('+', Colors.orange, Colors.black),
+                Padding(padding: EdgeInsets.only(bottom: 100),),
+                SizedBox(
+                  height: 70,
+                  width: 160,
+                  child: calcbutton('0', Colors.white70, Colors.black),
+                ),
+                SizedBox(
+                  height: 70,
+                  width: 70,
+                  child: calcbutton('.', Colors.white70, Colors.black),
+                ),
+                SizedBox(
+                  height: 70,
+                  width: 70,
+                  child: calcbutton('=', Colors.white70, Colors.black),
+                ),
+                SizedBox(height: 0,),
               ],
-            ),
+            )
           ],
         ),
       ),
